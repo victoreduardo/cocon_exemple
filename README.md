@@ -1,4 +1,4 @@
-# Edools_test
+# Cocon exemple
 - Free template: https://startbootstrap.com/previews/sb-admin-2/
 
 
@@ -17,5 +17,4 @@
 - Capybara
 - Factory Girl
 - Database Cleaner
-- Pronto
 - Rubocop
