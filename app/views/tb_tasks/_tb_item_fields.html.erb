@@ -1,0 +1,7 @@
+<div class="col-md-12">
+  <%= f.text_field :title, label: human_attr(f.object.class, :title),
+                   placeholder: "Informe o #{human_attr(f.object.class, :title)}" %>
+</div>
+<div class="col-md-12">
+  <%= link_to_remove_association "remove", f %>
+</div>

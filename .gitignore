@@ -1,0 +1,73 @@
+## IDEs
+.idea
+.vscode
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+.svn
+
+*.rbc
+capybara-*.html
+.rspec
+/log
+/tmp
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/public/system
+/coverage/
+/spec/tmp
+
+**.orig
+rerun.txt
+pickle-email-*.html
+/config/database.yml
+/config/unicorn.rb
+
+## Environment normalisation:
+/.bundle
+/vendor/bundle
+.rvmrc
+/vendor/assets/bower_components
+*.bowerrc
+bower.json
+.powenv
+node_modules
+
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+auto-save-list
+tramp
+.\#*
+
+# Org-mode
+.org-id-locations
+*_archive
+
+# flymake-mode
+*_flymake.*
+
+# eshell files
+/eshell/history
+/eshell/lastdir
+
+# elpa packages
+/elpa/
+
+# reftex files
+*.rel
+
+# AUCTeX auto folder
+/auto/
+
+# cask packages
+.cask/
+
+docs/ferias/magistrados/
+docs/ferias/servidores/
+doc
+
+schema.rb
+Gemfile.lock
+.byebug_history

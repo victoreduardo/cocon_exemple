@@ -1,0 +1,7 @@
+pt-BR:
+  breadcrumb:
+    tasks:
+      base: Tarefa
+      plural: Tarefas
+      new: Nova Tarefa
+      edit: Editar Tarefa

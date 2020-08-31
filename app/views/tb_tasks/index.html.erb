@@ -1,0 +1,52 @@
+<div class="card shadow mb-4">
+  <%= panel_header_filter %>
+  <div class="card-body">
+    <%= search_form_for @q, method: :get, id: 'tb_escolas_search',
+                        layout: :inline, html: { class: 'form-horizontal', role: 'form' } do |f| %>
+      <%= hidden_field_tag :tipo_relatorio %>
+      <div class="row">
+        <div class="col-md-6">
+          <%= h f.label :title_cont, "#{human_attr(TbTask, :title)}" %>
+          <%= h f.text_field :title_cont, class: 'form-control',
+                             label: "#{human_attr(TbTask, :title)}",
+                             placeholder: "Digite o #{human_attr(TbTask, :title)}",
+                             label_class: "margin-top-10" %>
+        </div>
+
+        <div class="col-md-12 margin-top-10">
+          <%= render "layouts/botoes_filtrar_limpar", :f => f %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 margin-top-10">
+      <div class="pull-right">
+        <%= link_to new_tb_task_path,
+                    remote: true,
+                    class: 'btn btn-success btn-xs' do %>
+          <i class="fa fa-plus"></i> <%= breadcrumb('tasks.new') %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content Row -->
+  <div class="row margin-top-10">
+    <div class="col-md-6">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h5 class="m-0 font-weight-bold text-primary"><%= breadcrumb('tasks.base') %></h5>
+        </div>
+        <div class="card-body">
+          <ul class="sortable-list connectList agile-list agile-list-contant" id="tasks">
+            <%= render 'card', cards: @tb_tasks, cor: 'info' %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

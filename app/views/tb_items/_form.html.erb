@@ -1,0 +1,17 @@
+<div class="card mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Items</h6>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-12">
+        <%= link_to_add_association 'add task', f, :tb_items %>
+        <%= f.fields_for :tb_items, f.object.tb_items_build do |e| %>
+          <%= e.text_field :title, label: human_attr(e.object.class, :title),
+                           placeholder: "Informe o #{human_attr(e.object.class, :title)}" %>
+          <%= link_to_remove_association "remove task", e %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

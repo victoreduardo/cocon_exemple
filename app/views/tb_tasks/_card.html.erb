@@ -1,0 +1,17 @@
+<% cards.each do |task| %>
+  <li class="<%= cor %>-element" id="<%= task.id %>">
+    <%= task.title %>
+    <div class="pull-right">
+      <%= link_to edit_tb_task_path(task),
+                  remote: true,
+                  class: 'btn btn-warning btn-sm' do %>
+        <i class="fa fa-pencil"></i> <%= breadcrumb('tasks.edit') %>
+      <% end %>
+    </div>
+    <div class="agile-detail">
+      <%= h task.description %>
+      <br/>
+      Items: <%= task.tb_items.map(&:title).join(',') %>
+    </div>
+  </li>
+<% end %>

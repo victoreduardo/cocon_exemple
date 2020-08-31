@@ -1,0 +1,28 @@
+<%= bootstrap_form_for @tb_task, remote: true,
+                       id: "tb_task_create", html: { role: "form" } do |f| %>
+  <div class="modal-header">
+    <h4 class="modal-title"><%= breadcrumb('tasks.base') %></h4>
+    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="form-body">
+      <%= f.alert_message specific_alert(:default_alert_message) %>
+
+      <%= f.text_field :title, label: human_attr(f.object.class, :title),
+                       placeholder: "Informe o #{human_attr(f.object.class, :title)}" %>
+
+      <%= f.text_area :description, label: human_attr(f.object.class, :description), rows: 3,
+                      placeholder: "Informe a #{human_attr(f.object.class, :description)}" %>
+
+      <%= render 'tb_items/form', f: f %>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <div class="pull-left">
+      <button type="button" data-dismiss="modal" class="btn btn-info">Fechar</button>
+    </div>
+    <button type="submit" class="btn btn-success">Salvar</button>
+  </div>
+<% end %>

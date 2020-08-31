@@ -1,0 +1,5 @@
+pt-BR:
+  activerecord:
+    attributes:
+      tb_item:
+        titulo: Título do Item

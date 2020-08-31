@@ -1,0 +1,5 @@
+NOME_EMPRESA = 'Tasks'
+
+TIPOS_IMPRESSAO = ['PDF', 'XML', 'XLS', 'CSV', 'XLSX']
+PORTRAIT = 'portrait'
+TOTAL_REGISTROS = 10

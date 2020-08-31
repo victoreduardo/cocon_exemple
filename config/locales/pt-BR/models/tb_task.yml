@@ -1,0 +1,9 @@
+pt-BR:
+  activerecord:
+    attributes:
+      tb_task:
+        titulo: Título da Tarefa
+        descricao: Descrição
+        conteudo: Conteúdo
+        responsavel: Responsável
+        data: Data

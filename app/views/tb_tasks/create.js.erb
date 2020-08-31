@@ -1,0 +1,7 @@
+<% if @error %>
+toastr["error"]("<%= specific_alert(:unsuccess_created) %>");
+<% else %>
+$('#tasks').html('<%= escape_javascript(render 'card', cards: @tb_tasks, cor: 'info')%>');
+toastr["success"]("<%= specific_alert(:success_created) %>");
+$("#modal_basic").modal('hide');
+<% end %>
